@@ -1,4 +1,7 @@
+from cv2 import threshold
 import pyautogui
+
+
 
 last_position = (None,None)
 last_dir = ''
@@ -10,8 +13,19 @@ def keypress():
     '''
 
     import keyboard
-
-    # put your code here
+    while True:
+        if keyboard.is_pressed('j'):
+            pyautogui.press('left')
+            print('left')
+        if keyboard.is_pressed('l'):
+            pyautogui.press('right')
+            print('right')
+        if keyboard.is_pressed('i'):
+            pyautogui.press('up')
+            print('up')
+        if keyboard.is_pressed('k'):
+            pyautogui.press('down')
+            print('down')
 
 
 def trackpad_mouse():
@@ -22,9 +36,35 @@ def trackpad_mouse():
     from pynput import mouse
 
     def on_move(x, y):
-        # put your code here
-        pass
-        
+        global last_position
+        global last_dir
+
+        threshold = 20
+
+        (old_x, old_y) = last_position
+        if old_x is None or old_y is None:
+            last_position = (x, y)
+        else:
+            # Find difference between previous and current position
+            x_diff = x - old_x
+            y_diff = y - old_y
+
+            if abs(x_diff) > threshold or abs(y_diff) > threshold:
+                # Try to use the values as directional input
+                if x_diff > y_diff:
+                    # Prioritize x movement
+                    if x_diff > 0:
+                        pyautogui.press('left')
+                        print(f'{last_position} x_diff {x_diff}, left')
+                    if x_diff < 0:
+                        pyautogui.press('right')
+                        print(f'{last_position} x_diff {x_diff}, right')
+                else:
+                    # Prioritize y movement
+                    pass
+            
+                last_position = (x, y)
+
 
     with mouse.Listener(on_move=on_move) as listener:
         listener.join() 
