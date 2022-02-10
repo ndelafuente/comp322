@@ -51,17 +51,22 @@ def trackpad_mouse():
 
             if abs(x_diff) > threshold or abs(y_diff) > threshold:
                 # Try to use the values as directional input
-                if x_diff > y_diff:
+                if abs(x_diff) > abs(y_diff):
                     # Prioritize x movement
-                    if x_diff > 0:
+                    if x_diff < 0:
                         pyautogui.press('left')
                         print(f'{last_position} x_diff {x_diff}, left')
-                    if x_diff < 0:
+                    else:
                         pyautogui.press('right')
                         print(f'{last_position} x_diff {x_diff}, right')
                 else:
                     # Prioritize y movement
-                    pass
+                    if y_diff < 0:
+                        pyautogui.press('up')
+                        print(f'{last_position} y_diff {x_diff}, up')
+                    else:
+                        pyautogui.press('right')
+                        print(f'{last_position} y_diff {x_diff}, down')
             
                 last_position = (x, y)
 
