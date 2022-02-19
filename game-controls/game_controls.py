@@ -9,7 +9,11 @@ last_dir = ''
 def keypress():
     ''' 
     Choose any four keys that a user can press to control the game.
-    Update this doc string with your choices. 
+
+    j = left
+    l = right
+    i = up
+    k = down
     '''
 
     import keyboard
