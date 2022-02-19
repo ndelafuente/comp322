@@ -8,7 +8,7 @@ last_dir = ''
 
 def keypress():
     ''' 
-    Choose any four keys that a user can press to control the game.
+    The new keys a user can press to play the game:
 
     j = left
     l = right
