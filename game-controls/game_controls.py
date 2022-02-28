@@ -43,6 +43,8 @@ def trackpad_mouse():
         global last_position
         global last_dir
 
+
+
         threshold = 20
 
         (old_x, old_y) = last_position
@@ -54,6 +56,8 @@ def trackpad_mouse():
             y_diff = y - old_y
 
             if abs(x_diff) > threshold or abs(y_diff) > threshold:
+
+                dir = last_dir
                 # Try to use the values as directional input
                 if abs(x_diff) > abs(y_diff):
                     # Prioritize x movement
