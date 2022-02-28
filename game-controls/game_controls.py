@@ -45,7 +45,7 @@ def trackpad_mouse():
 
 
 
-        threshold = 20
+        threshold = 50
 
         (old_x, old_y) = last_position
         if old_x is None or old_y is None:
