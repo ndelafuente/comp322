@@ -117,6 +117,9 @@ def color_tracker():
 
     while True:
         # Team code here.
+
+        direction = last_dir
+
         frame = vs.read()
         cv2.flip(frame, 1)
         imutils.resize(frame, width = 600)
@@ -159,21 +162,31 @@ def color_tracker():
                 if abs(dX) > abs(dY):
                     # Prioritize x movement
                     if dX < 0:
-                        pyautogui.press('left')
-                        print(f'dX {dX}, left')
+                        direction = 'left'                      
+                        print('left')
                     else:
-                        pyautogui.press('right')
-                        print(f'dX {dX}, right')
+                        direction = 'right'                       
+                        print('right')
                 else:
                     # Prioritize y movement
                     if dY < 0:
-                        pyautogui.press('up')
-                        print(f'dY {dY}, up')
+                        direction = 'up'
+                        print('up')
                     else:
-                        pyautogui.press('down')
-                        print(f'dY {dY}, down')
+                        direction = 'down'
+                        print('down')
+
+                if direction != last_dir:
+                    pyautogui.press(direction)
+                    last_dir = direction
+
         # Show direction on screen.
         cv2.putText(frame, direction, (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)
+
+        # Update the frame and update the frames we have seen.
+        cv2.imshow('Game Control Window', frame)
+        cv2.waitKey(1)
+        num_frames += 1
 
 
 
