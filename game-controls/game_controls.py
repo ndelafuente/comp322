@@ -179,7 +179,7 @@ def color_tracker():
                     print(direction)
 
         # Show direction on screen.
-        frame = cv2.putText(frame, direction, (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)
+        frame = cv2.putText(frame, direction, (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,255), 3)
 
         # Update the frame and update the frames we have seen.
         cv2.imshow('Game Control Window', frame)
