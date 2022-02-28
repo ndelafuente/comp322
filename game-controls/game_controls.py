@@ -58,21 +58,23 @@ def trackpad_mouse():
                 if abs(x_diff) > abs(y_diff):
                     # Prioritize x movement
                     if x_diff < 0:
-                        pyautogui.press('left')
-                        print(f'{last_position} x_diff {x_diff}, left')
+                        dir = 'left'
+                        
                     else:
-                        pyautogui.press('right')
-                        print(f'{last_position} x_diff {x_diff}, right')
+                        dir = 'right'
                 else:
                     # Prioritize y movement
                     if y_diff < 0:
-                        pyautogui.press('up')
-                        print(f'{last_position} y_diff {x_diff}, up')
+                        dir = 'up'
+
                     else:
-                        pyautogui.press('right')
-                        print(f'{last_position} y_diff {x_diff}, down')
-            
+                        dir = 'down'
+                
+                if dir != last_dir:
+                    pyautogui.press(dir)
+                    print(dir)
                 last_position = (x, y)
+                last_dir = dir 
 
 
     with mouse.Listener(on_move=on_move) as listener:
@@ -86,9 +88,10 @@ def color_tracker():
     import time
     import multithreaded_webcam as mw
 
-    # You need to define HSV colour range MAKE CHANGE HERE
-    colorLower = None
-    colorUpper = None
+    # You need to define HSV colour range.
+    # Using red-colored notebook as object.
+    colorLower = (0, 44,  100)
+    colorUpper = (0, 100, 100)
 
     # set the limit for the number of frames to store and the number that have seen direction change
     buffer = 20
@@ -100,6 +103,8 @@ def color_tracker():
     direction = ''
     global last_dir
 
+    threshold = 20
+
     #Sleep for 2 seconds to let camera initialize properly
     time.sleep(2)
     #Start video capture
@@ -107,9 +112,64 @@ def color_tracker():
 
 
     while True:
-        # your code here
-        continue
+        # Team code here.
+        frame = vs.read()
+        cv2.flip(frame, 1)
+        imutils.resize(frame, width = 600)
+        cv2.GaussianBlur(frame, (5, 5), 0)
+        cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+        # Creating mask.
+        mask = cv2.inRange(frame, colorLower, colorUpper)
+        mask = cv2.erode(mask, None, iterations = 2)
+        mask = cv2.dilate(mask, None, iterations = 2)
+
+        # Find contours. Only need the first item in the returned findContours() tuple.
+        contoursTuple = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        list = contoursTuple[0]
         
+        # Find the center of the object.
+        # Do only if we've found any contours.
+        if len(list) > 0:
+            center = None
+            maxContour = max(list, key = cv2.contourArea)
+
+            # Check if the largest contour is large enough to be our object.
+            minEnclosingCircleTuple = cv2.minEnclosingCircle(maxContour)
+            largestContourRadius = minEnclosingCircleTuple[1]
+
+            if(largestContourRadius > 10):
+                M = cv2.moments(maxContour)
+                center = (int (M['m10'] / M['m00']), int (M['m01'] / M['m00']))
+
+                pts.appendleft(center)
+
+        # Now find the direction.
+        if num_frames >= 10 and len(pts) >= 10:
+            (dX, dY) = (pts[0][0] - pts[9][0], pts[0][1] - pts[9][1])
+            
+
+            # Use threshold to decide if difference is large enough.
+            if abs(dX) > threshold or abs(dY) > threshold:
+                # Try to use the values as directional input
+                if abs(dX) > abs(dY):
+                    # Prioritize x movement
+                    if dX < 0:
+                        pyautogui.press('left')
+                        print(f'dX {dX}, left')
+                    else:
+                        pyautogui.press('right')
+                        print(f'dX {dX}, right')
+                else:
+                    # Prioritize y movement
+                    if dY < 0:
+                        pyautogui.press('up')
+                        print(f'dY {dY}, up')
+                    else:
+                        pyautogui.press('down')
+                        print(f'dY {dY}, down')
+        # Show direction on screen.
+        cv2.putText(frame, direction, (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)
 
 
 
