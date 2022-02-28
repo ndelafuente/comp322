@@ -94,8 +94,8 @@ def color_tracker():
 
     # You need to define HSV colour range.
     # Using red-colored notebook as object.
-    colorLower = (0, 44,  100)
-    colorUpper = (0, 100, 100)
+    colorLower = (29, 86,  6)
+    colorUpper = (64, 255, 255)
 
     # set the limit for the number of frames to store and the number that have seen direction change
     buffer = 20
@@ -121,14 +121,15 @@ def color_tracker():
         direction = last_dir
 
         frame = vs.read()
-        cv2.flip(frame, 1)
-        imutils.resize(frame, width = 600)
-        cv2.GaussianBlur(frame, (5, 5), 0)
-        cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+        
+        frame = cv2.flip(frame, 1)
+        frame = imutils.resize(frame, width = 600)
+        frame = cv2.GaussianBlur(frame, (5, 5), 0)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
         # Creating mask.
-        mask = cv2.inRange(frame, colorLower, colorUpper)
-        mask = cv2.erode(mask, None, iterations = 2)
+        frame = cv2.inRange(frame, colorLower, colorUpper)
+        mask = cv2.erode(frame, None, iterations = 2)
         mask = cv2.dilate(mask, None, iterations = 2)
 
         # Find contours. Only need the first item in the returned findContours() tuple.
@@ -163,25 +164,22 @@ def color_tracker():
                     # Prioritize x movement
                     if dX < 0:
                         direction = 'left'                      
-                        print('left')
                     else:
                         direction = 'right'                       
-                        print('right')
                 else:
                     # Prioritize y movement
                     if dY < 0:
                         direction = 'up'
-                        print('up')
                     else:
                         direction = 'down'
-                        print('down')
 
                 if direction != last_dir:
                     pyautogui.press(direction)
                     last_dir = direction
+                    print(direction)
 
         # Show direction on screen.
-        cv2.putText(frame, direction, (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)
+        frame = cv2.putText(frame, direction, (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 3)
 
         # Update the frame and update the frames we have seen.
         cv2.imshow('Game Control Window', frame)
