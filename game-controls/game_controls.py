@@ -203,6 +203,34 @@ def finger_tracking():
 
     # put your code here
 
+    # getting hand detection from mediapipes and saving it to a variable
+    # r_hand for right hand since we're only using the right hand.
+    r_hand = mp.solutions.hands
+
+    # providing information on accuracy to track hand
+    hand = r_hand.Hands(static_image_mode = False,
+        max_num_hands = 1,
+        min_detection_confidence = 0.5,
+        min_tracking_confidence = 0.5)
+
+    # starting ability to draw and save to a variable.
+    draw_hand = mp.solutions.drawing_utils 
+
+    # copied over code from color tracking to frame, flip, resize, and convert to RGB    
+    direction = last_dir
+
+    frame = vs.read()
+        
+    frame = cv2.flip(frame, 1)
+    frame = imutils.resize(frame, width = 600)
+    frame = cv2.GaussianBlur(frame, (5, 5), 0)
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+    # using converted frame, get results from processed image and save these results
+    framed_hand = hand.process(frame)
+
+    # for loop to go through all multi_hand_landmarks
+    # for right_hand in framed_hand.multi_hand_landmarks
 
 def unique_control():
     # put your code here
