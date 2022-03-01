@@ -236,12 +236,16 @@ def unique_control():
     # Our unique control will be using a gamepad to control a game, implemented with pygame.
     import pygame
 
+    pygame.init()
     # Using the joystick.
     pygame.joystick.init()
 
+    horizontal_axis_position = 0
+    vertical_axis_position = 0
+
     controller_id = 0
-    left_thumbstick_horizontal_axis_id = 4
-    left_thumbstick_vertical_axis_id   = 5
+    left_thumbstick_horizontal_axis_id = 0
+    left_thumbstick_vertical_axis_id   = 1
 
     controller = pygame.joystick.Joystick(controller_id)
     controller.init()
@@ -251,39 +255,49 @@ def unique_control():
     # Input loop.
     while True:
 
-        # Check axis position.
-        horizontal_axis_position = controller.get_axis(left_thumbstick_horizontal_axis_id)
-        vertical_axis_position = controller.get_axis(left_thumbstick_vertical_axis_id)
+        for event in pygame.event.get():
+            if event.type == pygame.JOYAXISMOTION:
+                # Check axis position.
+                print("Joystick moved.")
+            elif event.type == pygame.JOYBUTTONDOWN:
+                # Check if button A is pressed.
+                # Button A = Button 0
+                print("Button A pressed.")
+            elif event.type == pygame.JOYBUTTONUP:
+                print("Button released.")
 
-        # DEBUG
-        print(f"Horizontal axis position: {horizontal_axis_position}")
-        print(f"Vertical axis position:   {vertical_axis_position}")
+            # DEBUG
+            #if horizontal_axis_position != 0 or vertical_axis_position != 0:
+                #print(f"Horizontal axis position: {horizontal_axis_position}")
+                #print(f"Vertical axis position:   {vertical_axis_position}")
 
-        global last_position
-        global last_dir
-        direction = ''
+            global last_position
+            global last_dir
+            direction = ''
 
-        joystick_tolerance = .001
-        threshold = .10
+            joystick_tolerance = .01
+            threshold = .10
 
-        if horizontal_axis_position > 0 + joystick_tolerance:
-            dir = 'right'
-        elif horizontal_axis_position < 0 - joystick_tolerance:
-            dir = 'left'
-        else:
-            dir = ''
+            if horizontal_axis_position > 0 + joystick_tolerance:
+                direction = 'right'
+            elif horizontal_axis_position < 0 - joystick_tolerance:
+                direction = 'left'
+            else:
+                pass
+                #direction = ''
 
-        if vertical_axis_position > 0 + joystick_tolerance:
-            dir = 'up'
-        elif vertical_axis_position < 0 - joystick_tolerance:
-            dir = 'down'
-        else:
-            dir = ''
+            if vertical_axis_position > 0 + joystick_tolerance:
+                direction = 'down'
+            elif vertical_axis_position < 0 - joystick_tolerance:
+                direction = 'up'
+            else:
+                pass
+                #direction = ''
 
-        if dir != '':
-            pyautogui.press(dir)
-            print(dir)
-
+            if dir != '':
+                pyautogui.press(direction)
+                print(direction)
+            
 def main():
     control_mode = input("How would you like to control the game? ")
     if control_mode == '1':
