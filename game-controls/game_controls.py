@@ -223,14 +223,44 @@ def finger_tracking():
         
     frame = cv2.flip(frame, 1)
     frame = imutils.resize(frame, width = 600)
-    frame = cv2.GaussianBlur(frame, (5, 5), 0)
     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
     # using converted frame, get results from processed image and save these results
     framed_hand = hand.process(frame)
 
     # for loop to go through all multi_hand_landmarks
-    # for right_hand in framed_hand.multi_hand_landmarks
+
+    frame_width = frame.shape[0]
+    frame_height = frame.shape[1]
+
+    major_hand_features = []
+    num_fingers = 0
+
+    if not framed_hand.multi_hand.landmarks:
+        for right_hand in framed_hand.multi_hand.landmarks:
+            for id, lm in enumerate(right_hand.landmark):
+                new_x = frame_width * lm.x
+                new_y = frame_height * lm.y
+                frame = cv2.circle(frame, (new_x, new_y), 3, (255,0,255), cv2.FILLED)
+
+                major_hand_features.append((id, new_x, new_y))
+
+    
+    if len(major_hand_features) > 0:
+        if major_hand_features[4][1] < major_hand_features[3][1]:
+            num_fingers += 1
+
+        if major_hand_features[8][2] < major_hand_features[6][2]:
+            num_fingers += 1
+        
+        if major_hand_features[12][2] < major_hand_features[10][2]:
+            num_fingers += 1
+        
+        if major_hand_features[16][2] < major_hand_features[14][2]:
+            num_fingers += 1
+        
+        if major_hand_features[20][2] < major_hand_features[18][2]:
+            num_fingers += 1
 
 def unique_control():
     # Our unique control will be using a gamepad to control a game, implemented with pygame.
