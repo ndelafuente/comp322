@@ -240,18 +240,24 @@ def unique_control():
     pygame.joystick.init()
 
     controller_id = 0
-    left_thumbstick_horizontal_axis_id = 0
-    left_thumbstick_vertical_axis_id   = 1
+    left_thumbstick_horizontal_axis_id = 4
+    left_thumbstick_vertical_axis_id   = 5
 
     controller = pygame.joystick.Joystick(controller_id)
     controller.init()
 
+    print(controller.get_name())
+    print(f"Num axes: {controller.get_numaxes()}")
     # Input loop.
     while True:
 
         # Check axis position.
         horizontal_axis_position = controller.get_axis(left_thumbstick_horizontal_axis_id)
         vertical_axis_position = controller.get_axis(left_thumbstick_vertical_axis_id)
+
+        # DEBUG
+        print(f"Horizontal axis position: {horizontal_axis_position}")
+        print(f"Vertical axis position:   {vertical_axis_position}")
 
         global last_position
         global last_dir
