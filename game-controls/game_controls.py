@@ -195,6 +195,7 @@ def finger_tracking():
     import time
     import multithreaded_webcam as mw
     import mediapipe as mp
+    global last_dir
 
     ##Sleep for 2 seconds to let camera initialize properly
     time.sleep(2)
@@ -245,7 +246,7 @@ def finger_tracking():
 
                 major_hand_features.append((id, new_x, new_y))
 
-    
+
     if len(major_hand_features) > 0:
         if major_hand_features[4][1] < major_hand_features[3][1]:
             num_fingers += 1
@@ -261,6 +262,25 @@ def finger_tracking():
         
         if major_hand_features[20][2] < major_hand_features[18][2]:
             num_fingers += 1
+    
+    if num_fingers == 1:
+        direction = "up"
+    elif num_fingers == 2:
+        direction = "left"
+    elif num_fingers == 3:
+        direction = "right"
+    elif num_fingers == 5:
+        direction = "down"
+
+    if direction != last_dir:
+        pyautogui.press(direction)
+        last_dir = direction
+        print(direction)
+    
+    frame = cv2.putText(frame,str(int(num_fingers)),(10,70),cv2.FONT_HERSHEY_PLAIN, 3, (255,0,255), 3)
+    cv2.imshow("Image", frame)
+    cv2.waitKey(1)
+
 
 def unique_control():
     # Our unique control will be using a gamepad to control a game, implemented with pygame.
