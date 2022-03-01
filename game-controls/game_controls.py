@@ -121,10 +121,10 @@ def color_tracker():
         direction = last_dir
 
         frame = vs.read()
-        cv2.flip(frame, 1)
-        imutils.resize(frame, width = 600)
-        cv2.GaussianBlur(frame, (5, 5), 0)
-        cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+        frame = cv2.flip(frame, 1)
+        frame = imutils.resize(frame, width = 600)
+        frame = cv2.GaussianBlur(frame, (5, 5), 0)
+        frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
         # Creating mask.
         mask = cv2.inRange(frame, colorLower, colorUpper)
@@ -207,8 +207,50 @@ def finger_tracking():
 
 
 def unique_control():
-    # put your code here
-    pass
+    # Our unique control will be using a gamepad to control a game, implemented with pygame.
+    import pygame
+
+    # Using the joystick.
+    pygame.joystick.init()
+
+    controller_id = 0
+    left_thumbstick_horizontal_axis_id = 0
+    left_thumbstick_vertical_axis_id   = 1
+
+    controller = pygame.joystick.Joystick(controller_id)
+    controller.init()
+
+    # Input loop.
+    while True:
+
+        # Check axis position.
+        horizontal_axis_position = controller.get_axis(left_thumbstick_horizontal_axis_id)
+        vertical_axis_position = controller.get_axis(left_thumbstick_vertical_axis_id)
+
+        global last_position
+        global last_dir
+        direction = ''
+
+        joystick_tolerance = .001
+        threshold = .10
+
+        if horizontal_axis_position > 0 + joystick_tolerance:
+            dir = 'right'
+        elif horizontal_axis_position < 0 - joystick_tolerance:
+            dir = 'left'
+        else:
+            dir = ''
+
+        if vertical_axis_position > 0 + joystick_tolerance:
+            dir = 'up'
+        elif vertical_axis_position < 0 - joystick_tolerance:
+            dir = 'down'
+        else:
+            dir = ''
+
+        if dir != '':
+            pyautogui.press(dir)
+            print(dir)
 
 def main():
     control_mode = input("How would you like to control the game? ")
