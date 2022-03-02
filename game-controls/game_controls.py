@@ -1,4 +1,5 @@
-from xxlimited import new
+#from xxlimited import new
+from asyncio import sleep
 from cv2 import threshold
 import pyautogui
 
@@ -286,10 +287,13 @@ def finger_tracking():
 def unique_control():
     # Our unique control will be using a gamepad to control a game, implemented with pygame.
     import pygame
+    import time
 
     pygame.init()
     # Using the joystick.
     pygame.joystick.init()
+
+    #clock = pygame.time.Clock()
 
     horizontal_axis_position = 0
     vertical_axis_position = 0
@@ -302,52 +306,59 @@ def unique_control():
     controller.init()
 
     print(controller.get_name())
-    print(f"Num axes: {controller.get_numaxes()}")
+
+    axes = controller.get_numaxes()
+
+    print(f"Num axes: {axes}")
     # Input loop.
     while True:
 
+        # Handling events but not currently doing anything with them.
         for event in pygame.event.get():
             if event.type == pygame.JOYAXISMOTION:
-                # Check axis position.
-                print("Joystick moved.")
+                pass
+                #print("Joystick moved.")
             elif event.type == pygame.JOYBUTTONDOWN:
-                # Check if button A is pressed.
-                # Button A = Button 0
-                print("Button A pressed.")
+                print("Button pressed.")
             elif event.type == pygame.JOYBUTTONUP:
                 print("Button released.")
 
-            # DEBUG
-            #if horizontal_axis_position != 0 or vertical_axis_position != 0:
-                #print(f"Horizontal axis position: {horizontal_axis_position}")
-                #print(f"Vertical axis position:   {vertical_axis_position}")
+        horizontal_axis_position = controller.get_axis(0)
+        vertical_axis_position   = controller.get_axis(1)
+        # DEBUG
+        if horizontal_axis_position != 0 or vertical_axis_position != 0:
+            print(f"Horizontal axis position: {horizontal_axis_position}")
+            print(f"Vertical axis position:   {vertical_axis_position}")
 
-            global last_position
-            global last_dir
-            direction = ''
+        global last_position
+        global last_dir
+        direction = ''
 
-            joystick_tolerance = .01
-            threshold = .10
+        joystick_tolerance = .00
+        threshold = .10
 
+
+        if abs(horizontal_axis_position) > abs(vertical_axis_position):
             if horizontal_axis_position > 0 + joystick_tolerance:
                 direction = 'right'
             elif horizontal_axis_position < 0 - joystick_tolerance:
                 direction = 'left'
             else:
-                pass
-                #direction = ''
-
+                
+                direction = ''
+        else:
             if vertical_axis_position > 0 + joystick_tolerance:
                 direction = 'down'
             elif vertical_axis_position < 0 - joystick_tolerance:
                 direction = 'up'
             else:
-                pass
-                #direction = ''
+                
+                direction = ''
 
-            if dir != '':
-                pyautogui.press(direction)
-                print(direction)
+        if direction != '':
+            pyautogui.press(direction)
+            print(direction)
+        pygame.time.delay(10)
             
 def main():
     control_mode = input("How would you like to control the game? ")
