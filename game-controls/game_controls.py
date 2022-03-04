@@ -52,8 +52,6 @@ def trackpad_mouse():
         global last_position
         global last_dir
 
-
-
         threshold = 50
 
         (old_x, old_y) = last_position
@@ -125,8 +123,6 @@ def color_tracker():
 
 
     while True:
-        # Team code here.
-
         direction = last_dir
 
         frame = vs.read()
@@ -194,7 +190,6 @@ def color_tracker():
         cv2.imshow('Game Control Window', frame)
         cv2.waitKey(1)
         num_frames += 1
-
 
 
 def finger_tracking():
@@ -292,7 +287,6 @@ def finger_tracking():
 def unique_control():
     # Our unique control will be using a gamepad to control a game, implemented with pygame.
     import pygame
-    import time
 
     pygame.init()
     # Using the joystick.
