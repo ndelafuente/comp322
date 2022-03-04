@@ -8,6 +8,7 @@ were alternate keyboard controls, trackpad controls, color-based motion tracking
 Finally, we implemented a unique control method of our own choosing. We decided to go thumbstick control on 
 a gamepad, implemented with the module pygame.
 '''
+
 from asyncio import sleep
 from cv2 import threshold
 import pyautogui
@@ -114,7 +115,7 @@ def color_tracker():
     direction = ''
     global last_dir
 
-    threshold = 20
+    threshold = 40
 
     #Sleep for 2 seconds to let camera initialize properly
     time.sleep(2)
