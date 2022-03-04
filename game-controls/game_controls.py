@@ -1,9 +1,16 @@
+'''
+Authors: Nico de la Fuente, Sabrina Galban, Nicholas Wilder
+Date: 3/3/2022
 
+game_controls.py: Implementing different forms of game controls, including forms prescribed by the assignment, which
+were alternate keyboard controls, trackpad controls, color-based motion tracking, finger-counting based controls.
+
+Finally, we implemented a unique control method of our own choosing. We decided to go thumbstick control on 
+a gamepad, implemented with the module pygame.
+'''
 from asyncio import sleep
 from cv2 import threshold
 import pyautogui
-
-
 
 last_position = (None,None)
 last_dir = ''
