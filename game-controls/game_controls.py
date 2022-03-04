@@ -323,8 +323,8 @@ def unique_control():
             elif event.type == pygame.JOYBUTTONUP:
                 print("Button released.")
 
-        horizontal_axis_position = controller.get_axis(0)
-        vertical_axis_position   = controller.get_axis(1)
+        horizontal_axis_position = controller.get_axis(left_thumbstick_horizontal_axis_id)
+        vertical_axis_position   = controller.get_axis(left_thumbstick_vertical_axis_id)
         # DEBUG
         if horizontal_axis_position != 0 or vertical_axis_position != 0:
             print(f"Horizontal axis position: {horizontal_axis_position}")
@@ -334,30 +334,34 @@ def unique_control():
         global last_dir
         direction = ''
 
-        joystick_tolerance = .00
-        threshold = .10
+        thumbstick_rest_tolerance = .05
+        jitter_threshold = .10
 
-
+        # Go in the direction that is most being pointed towards with the thumbstick.
         if abs(horizontal_axis_position) > abs(vertical_axis_position):
-            if horizontal_axis_position > 0 + joystick_tolerance:
+            if horizontal_axis_position > 0 + thumbstick_rest_tolerance:
                 direction = 'right'
-            elif horizontal_axis_position < 0 - joystick_tolerance:
+            elif horizontal_axis_position < 0 - thumbstick_rest_tolerance:
                 direction = 'left'
             else:
                 
-                direction = ''
+                direction = last_dir
         else:
-            if vertical_axis_position > 0 + joystick_tolerance:
+            if vertical_axis_position > 0 + thumbstick_rest_tolerance:
                 direction = 'down'
-            elif vertical_axis_position < 0 - joystick_tolerance:
+            elif vertical_axis_position < 0 - thumbstick_rest_tolerance:
                 direction = 'up'
             else:
                 
-                direction = ''
+                direction = last_dir
 
         if direction != '':
             pyautogui.press(direction)
             print(direction)
+
+        last_dir = direction
+
+        # Pause for a bit.    
         pygame.time.delay(10)
             
 def main():
