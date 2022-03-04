@@ -1,4 +1,4 @@
-#from xxlimited import new
+
 from asyncio import sleep
 from cv2 import threshold
 import pyautogui
@@ -204,8 +204,6 @@ def finger_tracking():
     #Start video capture
     vs = mw.WebcamVideoStream().start()
 
-    # put your code here
-
     # getting hand detection from mediapipes and saving it to a variable
     # r_hand for right hand since we're only using the right hand.
     r_hand = mp.solutions.hands
@@ -293,8 +291,6 @@ def unique_control():
     # Using the joystick.
     pygame.joystick.init()
 
-    #clock = pygame.time.Clock()
-
     horizontal_axis_position = 0
     vertical_axis_position = 0
 
@@ -309,7 +305,6 @@ def unique_control():
 
     axes = controller.get_numaxes()
 
-    print(f"Num axes: {axes}")
     # Input loop.
     while True:
 
@@ -325,7 +320,8 @@ def unique_control():
 
         horizontal_axis_position = controller.get_axis(left_thumbstick_horizontal_axis_id)
         vertical_axis_position   = controller.get_axis(left_thumbstick_vertical_axis_id)
-        # DEBUG
+
+        # Axis output.
         if horizontal_axis_position != 0 or vertical_axis_position != 0:
             print(f"Horizontal axis position: {horizontal_axis_position}")
             print(f"Vertical axis position:   {vertical_axis_position}")
