@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="5_Celebration" size="1.000000 0.949074" />
+    <ImageTarget name="4_Blown" size="1.000000 0.497866" />
+    <ImageTarget name="3_Hiding" size="1.000000 1.200000" />
+    <ImageTarget name="2_Building" size="2.000000 1.576471" />
+    <ImageTarget name="1_Twigs" size="1.000000 0.853383" />
+  </Tracking>
+</QCARConfig>
