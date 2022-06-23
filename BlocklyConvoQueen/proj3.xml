@@ -1,0 +1,1958 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="GenericValue" id="keeckn4czj%5tp33Xv]T">qualifications</variable>
+    <variable type="GenericValue" id="S=f]UPn-mK167Iu8Gbit">nursing-position</variable>
+    <variable type="GenericValue" id="zto-hIGT*Y6tBmhL*Hrw">cs-position</variable>
+    <variable type="GenericValue" id="DEjZPVw~n%JVXyiyL7x3">grad-year</variable>
+    <variable type="GenericValue" id="WtO.Gr|?.[mH;m;S*xNz">user-name</variable>
+  </variables>
+  <block type="state" id="8?[2PKI$stsxasc=#dhy" x="83" y="-103">
+    <field name="stateName">cs-job-1</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="Ocopz-/UB!z*s0.b#%yr">
+        <statement name="utterance">
+          <block type="utt_text" id="2M;]Ww+QaA*f]YLt~9#}">
+            <field name="text">What is your favorite programming language?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="{;`KqGF}C=}zu.|q%)iD">
+        <field name="responseText">Python</field>
+        <statement name="actions">
+          <block type="say_utterance" id="|@QeX|aD!LE{eYdCGb8A">
+            <statement name="utterance">
+              <block type="utt_text" id="@D|/Hb3^)ah^Cws4~DWA">
+                <field name="text">Great.</field>
+              </block>
+            </statement>
+            <next>
+              <block type="goto" id="fFo[^l04%h^TcNxb^[-%">
+                <field name="stateName">cs-job-2</field>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="HU#qS@1.GF5z*8bqJhN/">
+            <field name="responseText">Java</field>
+            <statement name="actions">
+              <block type="say_utterance" id="r@-}FefUo$dBe*aCs+-*">
+                <statement name="utterance">
+                  <block type="utt_text" id="?uc|5b0tFO/3i9ocn7`_">
+                    <field name="text">Great.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="say_utterance" id="zBHbl4ScgKR_/]YeY7vY">
+                    <statement name="utterance">
+                      <block type="utt_text" id="mguL{(X[%+ybsnb}0mYn">
+                        <field name="text">We primarily use Python in our company.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="ask_utterance" id="@?hW8=$kZBKP`{Kh%bs/">
+                        <statement name="utterance">
+                          <block type="utt_text" id="cg,d+)1b{,XM-Y%b*x3M">
+                            <field name="text">Do you have any experience with this language?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_example" id=":uwm?kV^a/#^B`Xw)+7v">
+                <field name="responseText">C</field>
+                <statement name="actions">
+                  <block type="say_utterance" id="DwL]H?Q4wtQSE+StA]2?">
+                    <statement name="utterance">
+                      <block type="utt_text" id=":HP4aggZZgH9!!0y|6+g">
+                        <field name="text">Great.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="(YC_skWzE+?6n3Kqg)Y$">
+                        <statement name="utterance">
+                          <block type="utt_text" id="QYS|y!+qF3JL/x:8h[}t">
+                            <field name="text">We primarily use Python in our company.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="ask_utterance" id="R]cS,GS@s-tEJ?NO.j*I">
+                            <statement name="utterance">
+                              <block type="utt_text" id="%fU/[Yv^u1XSWV[=M_2{">
+                                <field name="text">Do you have any experience with this language?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="onresponse_example" id="u)LG]/sm$-,,E(uX}1Wi">
+                    <field name="responseText">C++</field>
+                    <statement name="actions">
+                      <block type="say_utterance" id="y0/UH%OC%?nBy$w5YHAk">
+                        <statement name="utterance">
+                          <block type="utt_text" id="`(JcwbKMwRzlT$LBc5@|">
+                            <field name="text">We primarily use Python in our company.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="ask_utterance" id="bjpooq._nGP3rPuv;7%p">
+                            <statement name="utterance">
+                              <block type="utt_text" id="pU831D[ilLo+DpWjCvbR">
+                                <field name="text">Do you have any experience with this language?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="onresponse_intent" id="!FFX*{Y2xTSUZtrqFXsv">
+                        <value name="intent">
+                          <block type="intent_yes" id="9PzKlS0RoQAm{uKDL*%d"></block>
+                        </value>
+                        <statement name="actions">
+                          <block type="ask_utterance" id="rOQfXr$AN7tA-nOz_D6G">
+                            <statement name="utterance">
+                              <block type="utt_text" id="7#0.OK+sZi=;h@XEJs!/">
+                                <field name="text">What would you say your proficiency is? Beginner, Intermediate, or Advanced?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="onresponse_intent" id="_jsk8XTR$1au6m2HjW4E">
+                            <value name="intent">
+                              <block type="intent_no" id="!yj|*S!CbQ}|;1c~fCw#"></block>
+                            </value>
+                            <statement name="actions">
+                              <block type="say_utterance" id="Oi]~Y.I^z.7VR7p$[%9w">
+                                <statement name="utterance">
+                                  <block type="utt_text" id="NWh}S=[0X)*Stz$*_zw/">
+                                    <field name="text">Unfortunately, you may not qualify for this position.</field>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="say_utterance" id="Y@PB#|!a+/vkyl~1}5Xl">
+                                    <statement name="utterance">
+                                      <block type="utt_text" id="lHhgY:z]lSS$O5v1a+9Q">
+                                        <field name="text">Because you have no experience with Python. We cannot offer a position to you at this time.</field>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="onresponse_example" id="5(l3h^rEs59|}VylZ?}8">
+                                <field name="responseText">Beginner</field>
+                                <statement name="actions">
+                                  <block type="say_utterance" id="b)e:ujI4q-B!1~@nlK6Y">
+                                    <statement name="utterance">
+                                      <block type="utt_text" id="(q}HIxG#`/Z8CHKMV|AI">
+                                        <field name="text">Unfortunately, you may not qualify for this position's requirements. </field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="say_utterance" id="cm7XL@p1X@0d9Y8Lk{/l">
+                                        <statement name="utterance">
+                                          <block type="utt_text" id="oY+f8vCYmEA]CZ9XjZs^">
+                                            <field name="text">But let us proceed with the interview.</field>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="goto" id="rLF]jOd*v]mv?SgjH^nz">
+                                            <field name="stateName">cs-job-2</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </statement>
+                                <next>
+                                  <block type="onresponse_example" id="JQ*84YT3EQ2x^hD_PDEY">
+                                    <field name="responseText">Intermediate</field>
+                                    <statement name="actions">
+                                      <block type="say_utterance" id="/uF}6n!LE2Jg*=7ftI%A">
+                                        <statement name="utterance">
+                                          <block type="utt_text" id="Y-Nb#tjlNQ!%yrYH6aFb">
+                                            <field name="text">Alright, I will now ask you some technical questions about Python.</field>
+                                          </block>
+                                        </statement>
+                                        <next>
+                                          <block type="goto" id="y*A4exR`f6p.HH[~rQ(@">
+                                            <field name="stateName">cs-job-2</field>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="onresponse_example" id=").TM_i=3b-]XV,UQ~_2!">
+                                        <field name="responseText">Advanced</field>
+                                        <statement name="actions">
+                                          <block type="say_utterance" id="^M@SWQ1e*DUZ+_B8nr*j">
+                                            <statement name="utterance">
+                                              <block type="utt_text" id="OtcxpyT}5#iTP_7a,3^t">
+                                                <field name="text">Great. I shall now ask you some questions about Python.</field>
+                                              </block>
+                                            </statement>
+                                            <next>
+                                              <block type="goto" id="Qg[4+;;D~m9:2|*t6!6o">
+                                                <field name="stateName">cs-job-2</field>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </statement>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="0(~+UJ7,6Hn~-2%%]Ac|" x="-407" y="57">
+    <field name="stateName">cs-job</field>
+    <statement name="actions">
+      <block type="say_utterance" id="FTLd7_ciSP*+Mh@y^`J?">
+        <statement name="utterance">
+          <block type="utt_text" id="wmJZ;5@~|ij1eK_G,RjB">
+            <field name="text">We are currently looking for a software engineer and a software developer.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="ask_utterance" id="m7FmE4EbrfzNLo~^Fy_X">
+            <statement name="utterance">
+              <block type="utt_text" id="KiS,dgAI*x#,R@h$bcj#">
+                <field name="text">Which position were you interested in?</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="01Iqtu8p_/w555Q6#QiW">
+        <field name="responseText">Engineer</field>
+        <statement name="actions">
+          <block type="variable_set" id="D)aE9Vg.+[/|/9lUW7:,">
+            <field name="variable" id="zto-hIGT*Y6tBmhL*Hrw" variabletype="GenericValue">cs-position</field>
+            <value name="value">
+              <block type="text" id="3I0lD^opH^FRHUD^?P@z">
+                <field name="value">software engineer</field>
+              </block>
+            </value>
+            <next>
+              <block type="say_utterance" id="1$u)_@*iJutJ6%r7Kg[_">
+                <statement name="utterance">
+                  <block type="utt_text" id="u5wlXkYSV^P;E_qyTgXD">
+                    <field name="text">Great, we are always looking to expand our number of software engineers.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="say_utterance" id="QLju,yVBc^ywN`*v]n]k">
+                    <statement name="utterance">
+                      <block type="utt_text" id="uFlS=hRFtt]m4J+;2{~+">
+                        <field name="text">Because software engineering is fast- paced, we require more engineers to deliver high quality solutions.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="#LybV4i?],}ScJ$rl$H7">
+                        <field name="stateName">cs-job-1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="`DHfwZ,UHpl|E5$v%sH=">
+            <field name="responseText">Developer</field>
+            <statement name="actions">
+              <block type="variable_set" id="3fn7W0G0I-JX~A]v$Sp|">
+                <field name="variable" id="zto-hIGT*Y6tBmhL*Hrw" variabletype="GenericValue">cs-position</field>
+                <value name="value">
+                  <block type="text" id="wNt]ipdnb^X_%4.dk@,3">
+                    <field name="value">software developer</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="say_utterance" id="Da5+JGK[JG]-Hk9SSc4N">
+                    <statement name="utterance">
+                      <block type="utt_text" id="/Mqn(U7at0kchFJJrYk6">
+                        <field name="text">That is great. Software developers are essential for our company.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="+_S_Sm2RTF_gsNCM=az#">
+                        <statement name="utterance">
+                          <block type="utt_text" id="rn=zV#K9yY^2(trQr]%]">
+                            <field name="text">They provide solutions for user problems with their problem-solving skills.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="jsaaYXKc.=Zt)[+_.u`1">
+                            <field name="stateName">cs-job-1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="JB1f.h9US)([Pv$vuw?l" x="1178" y="69">
+    <field name="stateName">cs-job-3</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="7.pL)gix}S7/OXO^ENnH">
+        <statement name="utterance">
+          <block type="utt_text" id="Hj!?bSk{HItw7iCrqCM8">
+            <field name="text">What are one of the three types of number in Python?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="n;sn2WzU+|4/3t(z;jG8">
+        <field name="responseText">integers</field>
+        <statement name="actions">
+          <block type="variable_incr" id="R:lHXzr8Rf8X6Ug2@yrN">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="/b6%/KObnr1#AS[}G!,*">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="say_utterance" id="7_f|7tG5B-sBJuU1Bb)^">
+                <statement name="utterance">
+                  <block type="utt_text" id=",X=)~O0`#gjT]kwn;Bzo">
+                    <field name="text">That is correct.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="say_utterance" id="~M`6T*cz0X4mUag`Q6},">
+                    <statement name="utterance">
+                      <block type="utt_text" id="Qgst.SFe/a9(cJHlVK2S">
+                        <field name="text">Integers are one of the three number types in Python.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="$i1$a8#:YQNcAB^NoaVI">
+                        <field name="stateName">cs-job-4</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="]^R_-s6,X%kpJglq2X*%">
+            <field name="responseText">floating point numbers</field>
+            <statement name="actions">
+              <block type="variable_incr" id="AP9l/o9GEDP)1.3v6;.m">
+                <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                <value name="increment">
+                  <shadow type="text" id="|F:vM4F)m+`PRnl{`oGB">
+                    <field name="value">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id="2G{@PFyo^qnbLO$zdO]_">
+                    <statement name="utterance">
+                      <block type="utt_text" id="]R^lNtsZcjctSCMWQE$;">
+                        <field name="text">That is correct.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="-!k46T,HU|*7^6BL*l#=">
+                        <statement name="utterance">
+                          <block type="utt_text" id="QkOls=aDV9Hi%-k{eIu!">
+                            <field name="text">Floating point numbers are one of the three number types in Python.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="g-6]:yc4$!.,eai11G02">
+                            <field name="stateName">cs-job-4</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_example" id="b0rgGRVv21!%AeQ3XVF^">
+                <field name="responseText">complex numbers</field>
+                <statement name="actions">
+                  <block type="variable_incr" id="$NmTz,@M(jmHu2Z1(SRv">
+                    <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                    <value name="increment">
+                      <shadow type="text" id="JiEArp+6`vWhgmk~`c`@">
+                        <field name="value">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="say_utterance" id="%yB,1+R}vw)r:])))S4)">
+                        <statement name="utterance">
+                          <block type="utt_text" id="edI`/iQkUe.-L?S|RVS6">
+                            <field name="text">That is correct.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="say_utterance" id="vzQB$:y|T!YkEE}=/3FL">
+                            <statement name="utterance">
+                              <block type="utt_text" id="+;[iv]L^jr-_9%MR!5^9">
+                                <field name="text">complex numbers are one of the three number types in Python.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="goto" id="He@bht*9ncbcnH{2T?eD">
+                                <field name="stateName">cs-job-4</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="onresponse_intent" id="G.THG7=y`JTH*X-uaS9}">
+                    <value name="intent">
+                      <block type="intent_dontknow" id="U%riMk3SBV]IPfd?W0)P"></block>
+                    </value>
+                    <statement name="actions">
+                      <block type="say_utterance" id="p)~]w?d{n=g@DL*^Woxm">
+                        <statement name="utterance">
+                          <block type="utt_text" id="WX1|c+egMS~raTFfSrDx">
+                            <field name="text">The three types of numbers are, integers, floating point numbers, and complex numbers.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="say_utterance" id="K3v%Jkei/f0jkUMQ/Nsy">
+                            <statement name="utterance">
+                              <block type="utt_text" id="qrhwYmz2oe!6W4+gfX#+">
+                                <field name="text">Next question.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="goto" id="K)NNwyb,.%?oa1}W@*J^">
+                                <field name="stateName">cs-job-4</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="6*uFY`|MkRK%G_p]T;0r" x="679" y="102">
+    <field name="stateName">cs-job-2</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="{L6}pxx[CdQZky;O$;)v">
+        <statement name="utterance">
+          <block type="utt_text" id="EEJx}L{1K!80Z~MNjT^`">
+            <field name="text">What are one of the four primitive types in Python?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="7~nv!u6;@A@/!]c[4$7L">
+        <field name="responseText">Integers</field>
+        <statement name="actions">
+          <block type="variable_incr" id="Hu_kJZC}`Q~T9]?x%#,+">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="r=4o=CWS[x+Q4X1}G:5}">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="say_utterance" id="pXhFqJL;a]ErM?fF?dCY">
+                <statement name="utterance">
+                  <block type="utt_text" id="y`ju|M{,-S0rOsZ]OUjC">
+                    <field name="text">Great.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="d1B0?]3mD{zgP3vv9a8P">
+                    <field name="stateName">cs-job-3</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="Fy5.d[u#qN7|8z${6lY+">
+            <field name="responseText">Float</field>
+            <statement name="actions">
+              <block type="variable_incr" id="#UGpzNM+N)`rM7lNax0|">
+                <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                <value name="increment">
+                  <shadow type="text" id="Rc1s;r$vi3)D{Ac`9}!%">
+                    <field name="value">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id="i,X8AX)b5@|W/v,zvTo7">
+                    <statement name="utterance">
+                      <block type="utt_text" id="v8NO6u~#UYy0FDHB?6,?">
+                        <field name="text">Great.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="%%fGNq|9DbXZDy{Hs6,)">
+                        <field name="stateName">cs-job-3</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_example" id="{DwFT6ae@b1#i{PEWJu}">
+                <field name="responseText">Strings</field>
+                <statement name="actions">
+                  <block type="variable_incr" id="W]!g%(dPrv}PsAJ828Am">
+                    <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                    <value name="increment">
+                      <shadow type="text" id="9,t4$Nlw}KhPdt0@[[C@">
+                        <field name="value">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="say_utterance" id="udtimiGm!JAQVXZ*i12|">
+                        <statement name="utterance">
+                          <block type="utt_text" id="s2}qsdqrVENBIp%,,5+G">
+                            <field name="text">Great.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="0z1O_tfULQN~}P{cb3g^">
+                            <field name="stateName">cs-job-3</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="onresponse_example" id=";-Y99lZv~i7XDYgfMSem">
+                    <field name="responseText">Boolean</field>
+                    <statement name="actions">
+                      <block type="variable_incr" id="5N8Q^rzV.imJSf_Q^;Bn">
+                        <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                        <value name="increment">
+                          <shadow type="text" id="p$!xTl9X?@45AFr=E6^Z">
+                            <field name="value">1</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="say_utterance" id="9ti*cc1Um0Y.,o3y=VK^">
+                            <statement name="utterance">
+                              <block type="utt_text" id="_DxaLkEsAG/NBeU_/z_3">
+                                <field name="text">Great.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="goto" id="}7eHFSJqCL4A[2-aw:P+">
+                                <field name="stateName">cs-job-3</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="onresponse_intent" id="q{sLw{Y_tanV|XfCqn=t">
+                        <value name="intent">
+                          <block type="intent_dontknow" id="i7(VgZ_:oyq;OI79st!r"></block>
+                        </value>
+                        <statement name="actions">
+                          <block type="say_utterance" id="wN:7O@[t5iSvPuG5C#8~">
+                            <statement name="utterance">
+                              <block type="utt_text" id="$rKdbj!a{9zq-`a6Qsap">
+                                <field name="text">That is alright. Moving on.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="goto" id="cB-M(%SRh%ZE^Qc9t%D|">
+                                <field name="stateName">cs-job-3</field>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="I14vFi:UDOV8mbG%o(Z!" x="1751" y="89">
+    <field name="stateName">cs-job-4</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="{.R0Uz=DQa-x8$l?T7me">
+        <statement name="utterance">
+          <block type="utt_text" id="%YKhmAV?RP6J34lQ_Y2i">
+            <field name="text">Which one is mutable? Lists or Tuples?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="zp=~oSQv8J:JXocS4.0|">
+        <field name="responseText">Lists</field>
+        <statement name="actions">
+          <block type="variable_incr" id="~|yuk2KG:=}34]|hcb|1">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="U0=`cxIfhpc(|F+F[NeD">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="say_utterance" id="QBKZWiC}ssl5Aq,Bg}Rg">
+                <statement name="utterance">
+                  <block type="utt_text" id="Rm*5$0!].txN6^]V3#lu">
+                    <field name="text">That is correct.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id=")g%%.~4/M}YE#]w12rzz">
+                    <field name="stateName">cs-job-5</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="z:HkhusC$xAo0DvC1lm1">
+            <field name="responseText">Tuples</field>
+            <statement name="actions">
+              <block type="say_utterance" id="?%:g91dKe+x:Wi#9qe,d">
+                <statement name="utterance">
+                  <block type="utt_text" id="yzs9E-{)kf+fAnn1hAKk">
+                    <field name="text">That is incorrect.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="say_utterance" id="TiA3D*YxO!j=KOi5/!UP">
+                    <statement name="utterance">
+                      <block type="utt_text" id="vi.r.6E^G3*h}uuSP-FD">
+                        <field name="text">Tuples are immutable.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="fbWg_S+@wwvOrGa{bpH{">
+                        <field name="stateName">cs-job-5</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_intent" id="=sNPi-Hdj:.!wRhQa2GU">
+                <value name="intent">
+                  <block type="intent_dontknow" id="o{fhgazX=rk.[tNIt.Up"></block>
+                </value>
+                <statement name="actions">
+                  <block type="say_utterance" id="JpV2RXPf6OP=-X:^GOVf">
+                    <statement name="utterance">
+                      <block type="utt_text" id="=LiVdprrh/Oo~zj,=yu+">
+                        <field name="text">Lists are mutable. Tuples are not.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="hSy4GJKu9]GWpEb%OC_$">
+                        <statement name="utterance">
+                          <block type="utt_text" id="EMP56uwa-A4[YAlzWqE6">
+                            <field name="text">Next question.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="=;c:;NBfEJtMC@qWsE_D">
+                            <field name="stateName">cs-job-5</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="IN}Q#U{0=ooXqwC[vOA;" x="2213" y="82">
+    <field name="stateName">cs-job-5</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="Z2MM^#Ip${^(O/5+3vkk">
+        <statement name="utterance">
+          <block type="utt_text" id="vsDMLdT^nDND*a/KyB$}">
+            <field name="text">When a class is inherited, what is this class called?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="){}vJ0^uQk-hG=Rndj}B">
+        <field name="responseText">super class</field>
+        <statement name="actions">
+          <block type="variable_incr" id="_g)HyZ0iRZQ4s}u,fe,|">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="V}o2*ux:a$D%!LSLXv=C">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="say_utterance" id="BlDXa|sY.E2UyDs8zCD=">
+                <statement name="utterance">
+                  <block type="utt_text" id="G7%ag~JWO)kqL0TD]%dM">
+                    <field name="text">Correct.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="say_utterance" id="#MR!n!,fUO]0?@(%%0Ft">
+                    <statement name="utterance">
+                      <block type="utt_text" id="*K?eAt_h3%AHRtiElTWC">
+                        <field name="text">super classes are also known as a parent class.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="Wpcx#%`xCnot/Ca0W$zM">
+                        <field name="stateName">cs-final</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="O+61Mj~c#X]n{$9cmHH%">
+            <field name="responseText">parent class</field>
+            <statement name="actions">
+              <block type="variable_incr" id="yG3bhl]smnDXtJLK+Yd%">
+                <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                <value name="increment">
+                  <shadow type="text" id="zxuKg^(r@%H..p95kdu,">
+                    <field name="value">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id="[/^At39.)1?78mnCMst1">
+                    <statement name="utterance">
+                      <block type="utt_text" id="cL`NJUbSzME%1@]=4kkK">
+                        <field name="text">Right.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="y9B(!X:m^?/EMh]lXQdd">
+                        <statement name="utterance">
+                          <block type="utt_text" id="V,{C$[UWvVb=VBk_d]ta">
+                            <field name="text">parent classes are also known as a super class</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="KC]dPpZv4:2xX!(.ZOM*">
+                            <field name="stateName">cs-final</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_intent" id="V8Jj}FFr,C.M1Z(!~5${">
+                <value name="intent">
+                  <block type="intent_dontknow" id="f;-uaX2*SpXsC0}r;cPK"></block>
+                </value>
+                <statement name="actions">
+                  <block type="say_utterance" id="#92-Y|^*J|x$sOqWAWai">
+                    <statement name="utterance">
+                      <block type="utt_text" id="sfd$,yS}h#4I5q!0N.Q-">
+                        <field name="text">Inherited classes are also known as super classes or parent classes.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="l9+ul/9V0=x#or#2f}R=">
+                        <field name="stateName">cs-final</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="YWj47aboM[QGL)%LLu#M" x="2708" y="88">
+    <field name="stateName">cs-final</field>
+    <statement name="actions">
+      <block type="say_utterance" id="eCvZ?p]]eT2at[(ltvv4">
+        <statement name="utterance">
+          <block type="utt_text" id="x9gkG`fPhh`mOoyCFaDb">
+            <field name="text">Thank you for your time.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="if_then_else" id="wG{{%27WWxZ6%Y%*QR7-">
+            <value name="cond">
+              <block type="cond_compare" id=",Jmi^M6O#H,49.na68o^">
+                <field name="comparison">&gt;</field>
+                <value name="first">
+                  <block type="variable_get" id="*Bh7h-B.$K1`Z0-sbp/F">
+                    <field name="varname" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                  </block>
+                </value>
+                <value name="second">
+                  <block type="text" id="2/S.#moliKpaufzn#V4#">
+                    <field name="value">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="action_gesture_param" id="O;3%Q80#h=2W|tqNw_GB">
+                <field name="gesture">BigSmile</field>
+                <value name="strength">
+                  <shadow type="text" id="V7zs7`GiunUT@mwzbc]Y">
+                    <field name="value">3.0</field>
+                  </shadow>
+                </value>
+                <value name="duration">
+                  <shadow type="text" id="/ql!#5z]34wHD!b):u.=">
+                    <field name="value">3.0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id="1EmHkT*Y!CtoGm0_s;gM">
+                    <statement name="utterance">
+                      <block type="utt_text" id="z9s2B%vcPT]uzo_ygQC[">
+                        <field name="text">Congratulations, we would like to offer you the</field>
+                        <next>
+                          <block type="utt_value" id=":4#T!/|C?p1!l];Q!;y[">
+                            <value name="value">
+                              <block type="variable_get" id=")S#RPxzQ(=w/682lMAAP">
+                                <field name="varname" id="zto-hIGT*Y6tBmhL*Hrw" variabletype="GenericValue">cs-position</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="utt_text" id="g@WB1,(QAyh%#mkDY]Ip">
+                                <field name="text">position! We were impressed with your qualifications and would love for you to join us.</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="actions2">
+              <block type="say_utterance" id="wUH16q/=h.Tb;FBClSyD">
+                <statement name="utterance">
+                  <block type="utt_text" id="4;^_tTXN*$)bKc`*q*L:">
+                    <field name="text">Unfortunately, we cannot offer you a position at this time.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="say_utterance" id="j6Y}I|FHRS9ftL~/R~TU">
+                    <statement name="utterance">
+                      <block type="utt_text" id="sC=nEb(32;FKh`V(QoEc">
+                        <field name="text">At Torero Inc, we want to make sure that our employees fit our requirements.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="S$DJRKA7|lZhbX.HdKpB">
+                        <statement name="utterance">
+                          <block type="utt_text" id="h,c1%Y68`YutPduF/(yW">
+                            <field name="text">We wish you success in your future endeavors.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="action_gesture" id="(X2k|_DhabINPPgu%#yX">
+                            <field name="gesture">Nod</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id="cwJZNdlLfF]`u1mS]0HV" x="-829" y="578">
+    <field name="stateName">Manager</field>
+    <statement name="actions">
+      <block type="action_mask" id="rv.4M0#|PiY7^5HKbdPz">
+        <field name="model">adult</field>
+        <next>
+          <block type="action_texture" id="Af5X)`RNqps[[7lim|RU">
+            <field name="texture">Marty</field>
+            <next>
+              <block type="action_voice" id="$%6BCu|ko:})AcgCxprt">
+                <field name="voice">Joey-Neural (en-US) - Amazon Polly</field>
+                <next>
+                  <block type="say_utterance" id="r^Bb)NX.sCQ7)/mwWWY]">
+                    <statement name="utterance">
+                      <block type="utt_text" id="mNYFl@rO$3QiFod{.:cy">
+                        <field name="text">hello</field>
+                        <next>
+                          <block type="utt_value" id="$Iu1Ra/+K[TwYMf!+~~$">
+                            <value name="value">
+                              <block type="variable_get" id="lWqj0W*vVIMuQ$|mp?8(">
+                                <field name="varname" id="WtO.Gr|?.[mH;m;S*xNz" variabletype="GenericValue">user-name</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="utt_text" id="wft|qmUF]%[1GTwTZOFy">
+                                <field name="text">My name is Marty. I am the Hiring Manager of Torero Inc.</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="U;}X6(,z7Mq3YT[il(O`">
+                        <statement name="utterance">
+                          <block type="utt_text" id="7NM6Wlz|C5/{Z2QvegA{">
+                            <field name="text">Let's get started shall we.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="ask_utterance" id=":t.pL!b;`25`WMT|QzY.">
+                            <statement name="utterance">
+                              <block type="utt_text" id="metjAOrw!X#h8WY3j~MQ">
+                                <field name="text">What year did you graduate?</field>
+                              </block>
+                            </statement>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_intent" id="Q]2q);:7!4`NV^SSt}Zr">
+        <value name="intent">
+          <block type="intent_entity" id="![Jvre]sjs?jkFezg*QB">
+            <statement name="entityBlocks">
+              <block type="entity_number" id="1$Aj1=bLPLOp~R$`gU-Q">
+                <field name="variable" id="DEjZPVw~n%JVXyiyL7x3" variabletype="GenericValue">grad-year</field>
+              </block>
+            </statement>
+          </block>
+        </value>
+        <statement name="actions">
+          <block type="say_utterance" id="KCtxTE],wBYy$8u,(V/~">
+            <statement name="utterance">
+              <block type="utt_text" id="+FmWKBH-2.2gYI!r(RXT">
+                <field name="text">Fantastic. Class of </field>
+                <next>
+                  <block type="utt_value" id="[BH6xk;r)1@@1F4{tXK~">
+                    <value name="value">
+                      <block type="variable_get" id="-4q%ZMuvk6arNq@jmydY">
+                        <field name="varname" id="DEjZPVw~n%JVXyiyL7x3" variabletype="GenericValue">grad-year</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="utt_text" id="*fgKG=MsesG)CxhTj|zR">
+                        <field name="text">I see.</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="ask_utterance" id="~Vf#7p)OSa3CP5_3*69H">
+                <statement name="utterance">
+                  <block type="utt_text" id="{u@i9~a7WR3#+7~2Ggh:">
+                    <field name="text">What did you major in?</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="@N;p^$~VD#=WEwvut$eT">
+            <field name="responseText">computer science</field>
+            <statement name="actions">
+              <block type="say_utterance" id="Hvek,a`KK|y6ii3?$mvw">
+                <statement name="utterance">
+                  <block type="utt_text" id="Q+@dvE8P%9km6t|XriA0">
+                    <field name="text">Fellow Computer Scientist I see. </field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="TSpakSMuEiIWA#$KW:d4">
+                    <field name="stateName">cs-job</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_example" id="8$W=[}UF;/b?|(XfxhC2">
+                <field name="responseText">nursing</field>
+                <statement name="actions">
+                  <block type="say_utterance" id="}Izl5bH.K6(m!tI{5)K+">
+                    <statement name="utterance">
+                      <block type="utt_text" id="0WF1b-3,h{y=wtl-j^BK">
+                        <field name="text">I see. Thank you for choosing to be a nurse during these unprecedented times.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="qM}2Z{X-:mA?*}@Nzb%Y">
+                        <field name="stateName">nurse-job</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="onresponse_example" id="{RWE8cYzWz|QMF4C(Z2a">
+                    <field name="responseText">chemistry</field>
+                    <statement name="actions">
+                      <block type="say_utterance" id="ysZG/`}W#yi`WX1B8x(V">
+                        <statement name="utterance">
+                          <block type="utt_text" id="2@|=crYcM)s:!T_Y%Dc$">
+                            <field name="text">Fellow Computer Scientist I see. </field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="0~R5Cd4d#;:=GiMqmpE)">
+                            <field name="stateName">chem-job</field>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="Cm76+#G[)ie:}Bz4u{1I" deletable="false" editable="false" x="-1323" y="634">
+    <field name="stateName">start</field>
+    <statement name="actions">
+      <block type="action_voice" id="LlYSn9xG1A+}u(NL/A`{">
+        <field name="voice">Kimberly-Neural (en-US) - Amazon Polly</field>
+        <next>
+          <block type="action_mask" id="wsy%-AahI1su!`s-rwb|">
+            <field name="model">anime [legacy]</field>
+            <next>
+              <block type="action_texture" id="l,f%6/n{/h/1ePl7O(:.">
+                <field name="texture">AnimePink</field>
+                <next>
+                  <block type="say_utterance" id="JUfeKTbTPj-vme-dpFM#">
+                    <statement name="utterance">
+                      <block type="utt_text" id="b5~8po23yrHc#Qr~D7Z,">
+                        <field name="text">hello</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="listen" id="V}lWt}b9p#e22R_j0_0l"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="]KW.[zS6C_PdJ{fSP4I3">
+        <field name="responseText">hello</field>
+        <statement name="actions">
+          <block type="ask_utterance" id="M4*F;R+}[U%@4_9+;)hp">
+            <statement name="utterance">
+              <block type="utt_text" id="hV;9`C@7YlA4O1Io5Z}{">
+                <field name="text">What is your name?</field>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="(-G(z]$9Ct`5=34%=Z[D">
+            <value name="intent">
+              <block type="intent_entity" id="s{FP%@Ci$tLBt)YCh1J4">
+                <statement name="entityBlocks">
+                  <block type="entity_name" id="Jv8O?|2Nw~NnAM1Qfav?">
+                    <field name="variable" id="WtO.Gr|?.[mH;m;S*xNz" variabletype="GenericValue">user-name</field>
+                  </block>
+                </statement>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="6H=NS*3.L#hc~!b?CA,f">
+                <statement name="utterance">
+                  <block type="utt_value" id="-9,3`_4N55VaVi;r/qh?">
+                    <value name="value">
+                      <block type="variable_get" id="uwjucE.0n4l(wvi;xErJ">
+                        <field name="varname" id="WtO.Gr|?.[mH;m;S*xNz" variabletype="GenericValue">user-name</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="utt_text" id="w3^mHz#8-~G/q!Fyo6Vj">
+                        <field name="text">It is nice to meet you.</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="ask_utterance" id="M,~F-s45;SBdwlHI^m(l">
+                    <statement name="utterance">
+                      <block type="utt_text" id=";dz-{|n|pK/11+mh?S};">
+                        <field name="text">Are you here for the job interview?</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_intent" id="w.arx]]+|6s.h|@ePlFV">
+                <value name="intent">
+                  <block type="intent_yes" id="Qph-OBC!Fg2XP5fb~n;m"></block>
+                </value>
+                <statement name="actions">
+                  <block type="say_utterance" id="s#gF+sW|70S@-TN;aDiH">
+                    <statement name="utterance">
+                      <block type="utt_text" id="B?HAk`cl/_rPjUHY{iW/">
+                        <field name="text">Great. I will let my manager know you are here.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id=")tyyU[j|/Fy~g`N/h^3Z">
+                        <field name="stateName">Manager</field>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="onresponse_intent" id=",$l].jBV~uOOvc6-3Wly">
+                    <value name="intent">
+                      <block type="intent_no" id="$D9o}D.6sg^E]m+0gMUo"></block>
+                    </value>
+                    <statement name="actions">
+                      <block type="say_utterance" id=".SO5n,E1|`s:XNinp9m%">
+                        <statement name="utterance">
+                          <block type="utt_text" id="vk;g_KF0{5Er.mhsj5XB">
+                            <field name="text">Alright, have a nice day.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="action_gesture" id="C9U%;$Xf3d5xApB~]64I">
+                            <field name="gesture">Wink</field>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="47rJJ^,sR]QF;Q6~*S6O" x="-362" y="1325">
+    <field name="stateName">nurse-job</field>
+    <statement name="actions">
+      <block type="say_utterance" id="69)kYVq?3G+58bNZbxSH">
+        <statement name="utterance">
+          <block type="utt_text" id="!1k*PZ}tlFjKLr`^B;$.">
+            <field name="text">We are currently looking for a family nurse, urgent care nurse, and a cardiac nurse.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="ask_utterance" id="CXei6_9C})7P{FFGq_!o">
+            <statement name="utterance">
+              <block type="utt_text" id="p3vY;dZsJ-Uc5m}H6~js">
+                <field name="text">Which nursing position were you interested in?</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="93(tjyDiN=zu_};VX=]`">
+        <field name="responseText">family nurse</field>
+        <statement name="actions">
+          <block type="variable_set" id="~ieJz~Uj*a7pQ)K9QL=k">
+            <field name="variable" id="S=f]UPn-mK167Iu8Gbit" variabletype="GenericValue">nursing-position</field>
+            <value name="value">
+              <block type="text" id="5+pQ*I~U=u7^nA#kNo{Z">
+                <field name="value">family nurse</field>
+              </block>
+            </value>
+            <next>
+              <block type="action_gesture" id="7{~[ulBK,`}BimBU7W5o">
+                <field name="gesture">Nod</field>
+                <next>
+                  <block type="say_utterance" id="4LPK~,M.8$)6[=AvamfP">
+                    <statement name="utterance">
+                      <block type="utt_text" id="wMDniSoE1ywrBClX.)*j">
+                        <field name="text">Fantastic. Let us proceed.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="JL$I07jH0$fOtjxxo6vI">
+                        <field name="stateName">nurse-job-1</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="5]FiD(;T!)Z+#uC+[=(L">
+            <field name="responseText">urgent care</field>
+            <statement name="actions">
+              <block type="variable_set" id="ECazY;wI=hqK;^FnXK;_">
+                <field name="variable" id="S=f]UPn-mK167Iu8Gbit" variabletype="GenericValue">nursing-position</field>
+                <value name="value">
+                  <block type="text" id="*qp8.%k?7M?#=h24Rt}8">
+                    <field name="value">urgent care nurse</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="say_utterance" id="`|x^uWX=.aF_O+YPL]?S">
+                    <statement name="utterance">
+                      <block type="utt_text" id="cru5~sAM9~nr]g!IA7k:">
+                        <field name="text">Great, that is a wonderful area to work in.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="action_gesture" id="?Z]l|3}Nd;Dh^i#(A.=Y">
+                        <field name="gesture">BigSmile</field>
+                        <next>
+                          <block type="goto" id="Tc6/!.jpk{Or)LsH{[]}">
+                            <field name="stateName">nurse-job-1</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_example" id="#Fl)!*N)E,BEGBJk]Z_H">
+                <field name="responseText">cardiac</field>
+                <statement name="actions">
+                  <block type="variable_set" id="9~ApJNbG/F1#mzjj8T/A">
+                    <field name="variable" id="S=f]UPn-mK167Iu8Gbit" variabletype="GenericValue">nursing-position</field>
+                    <value name="value">
+                      <block type="text" id="G@b}ddvy%.3`QgKh-N!-">
+                        <field name="value">cardiac nurse</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="action_gesture" id="%eTB^d(SW5nQlR#:,V8r">
+                        <field name="gesture">Nod</field>
+                        <next>
+                          <block type="say_utterance" id="[B;u6K2e1f~pr:4R*:rg">
+                            <statement name="utterance">
+                              <block type="utt_text" id="ehmz#yiwnqr[uk8`Vw,:">
+                                <field name="text">Awesome, let us continue.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="action_gesture" id="XCO#a(b`!Ix44=s+!Pzl">
+                                <field name="gesture">BigSmile</field>
+                                <next>
+                                  <block type="goto" id="[1KasUY[bBerMt=#~5zL">
+                                    <field name="stateName">nurse-job-1</field>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="E71I^u{qKZ^Pv,U8D/HL" x="113" y="1474">
+    <field name="stateName">nurse-job-1</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="A1mhMSxE^]^o=`M*wUBw">
+        <statement name="utterance">
+          <block type="utt_text" id="}OAU1Hw:BQM12fK{ElQu">
+            <field name="text">Do you like working with other nurses?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_intent" id="!td.zTQ7}U?66X!Zr,^x">
+        <value name="intent">
+          <block type="intent_yes" id="^]evK6?Wvmt=3a{GY49S"></block>
+        </value>
+        <statement name="actions">
+          <block type="variable_incr" id="~g[i=`==k5b*)(5rPkXG">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="XCEb5bfqSR67~R~D+g$F">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="say_utterance" id="g_3:qupogI_B?EOy${As">
+                <statement name="utterance">
+                  <block type="utt_text" id="S@9kaOa)q^RNKLe@VNyV">
+                    <field name="text">Great. We are very team-oriented so we like our nurses to be team players.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="%IM:(wP0]i8gLQd(Tl2t">
+                    <field name="stateName">nurse-job-2</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="8Y)M{Sx+0`KAGX86GTiO">
+            <value name="intent">
+              <block type="intent_no" id="T--TTXRJ|BMRq{OVfa#z"></block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="Iq)q,T9Xf?.DB@=lyJoa">
+                <statement name="utterance">
+                  <block type="utt_text" id=")Z^?tC}2t,yEUE?Nj9ZV">
+                    <field name="text">I see. Please know that our company is very team-oriented so we like our nurses to be team players.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="7J+TH6Sl%*%/RTW2V}Sj">
+                    <field name="stateName">nurse-job-2</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="hPLGeGRtyFMHQ}AO+,*(" x="698" y="1484">
+    <field name="stateName">nurse-job-2</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="Q6di`j@x7TC/X~Dwrp.o">
+        <statement name="utterance">
+          <block type="utt_text" id="clH#8Gx.^g~Y2{6BKg[u">
+            <field name="text">Do you work well under-presure?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_intent" id="a=U#6A}-Jh|f7K64V$B9">
+        <value name="intent">
+          <block type="intent_yes" id="!D|PRS73cQB5bhw#7@l!"></block>
+        </value>
+        <statement name="actions">
+          <block type="say_utterance" id="Vr`3$^mqOYq`8VJeR!fQ">
+            <statement name="utterance">
+              <block type="utt_text" id="4N0s$$*K+FA[Z@ezi@]k">
+                <field name="text">Great.</field>
+              </block>
+            </statement>
+            <next>
+              <block type="ask_utterance" id="Ij,gJ]zx|#w2(f}xX{bH">
+                <statement name="utterance">
+                  <block type="utt_text" id=":7+`Pt9Nld|Ys8%;@D,k">
+                    <field name="text">Can you explain?</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="q+H@cA{S[E.S)$/1d{8s">
+            <value name="intent">
+              <block type="intent_no" id="W#2mg}saGu/MsjmWD.v|"></block>
+            </value>
+            <statement name="actions">
+              <block type="say_utterance" id="R$QlM0hpW0?|yPnUjoI(">
+                <statement name="utterance">
+                  <block type="utt_text" id="vQGZfe~d~Hu8lJ2Vi14@">
+                    <field name="text">Understandable. But know that our company has a very fast paced environment.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id=";hwT-K{Q.e}kZjK(-Gc,">
+                    <field name="stateName">nurse-job-3</field>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="*Voz#rAVK.3:Kbr:r:8K">
+                <statement name="actions">
+                  <block type="variable_incr" id="i^ZhC,Q*uAcXXy`A~*fO">
+                    <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                    <value name="increment">
+                      <shadow type="text" id="D$hK-,g?GN:fu|n,@Xd:">
+                        <field name="value">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="say_utterance" id="QTty@T)-yrr.!M|D6gAX">
+                        <statement name="utterance">
+                          <block type="utt_text" id="DlxID-n$K^Cv,b[PDS}%">
+                            <field name="text">That is good to hear. Let us move on. </field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id=")l^@D!:eM|W?q^@9-Z{+">
+                            <field name="stateName">nurse-job-3</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="onresponse_nothing" id="7?swr=Q4)BI@UC}eW?^s">
+                    <statement name="actions">
+                      <block type="ask_utterance" id="s*.cV/4p3Jm~(^NRM)9S">
+                        <statement name="utterance">
+                          <block type="utt_text" id="+IX/k)P1#.ysLF#Nk9)9">
+                            <field name="text">Can you explain how you work under pressure?</field>
+                          </block>
+                        </statement>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="z|gU$6-ohu_4`w|?UK#z" x="1275" y="1494">
+    <field name="stateName">nurse-job-3</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="vzS=PHVS/Kk7acMAcenk">
+        <statement name="utterance">
+          <block type="utt_text" id="7BLfMc1i,]NV$d3E/K{Z">
+            <field name="text">What medical instrument is used to grasp tissue during a surgical procedure?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_example" id="Ik!ms8lScmeBxaW/zj-_">
+        <field name="responseText">forceps</field>
+        <statement name="actions">
+          <block type="variable_incr" id="u*`b7r-[LcMC;Ur*vJgL">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="gz?61S;!*{QF?p!I@[Ak">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="say_utterance" id="U/d-H9bO2.hu45=+(]O@">
+                <statement name="utterance">
+                  <block type="utt_text" id="{9]R.{KF/Z!OiuYAP:M6">
+                    <field name="text">Correct.</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="goto" id="D[Y/Y8;hfe[]%y#_4,Ip">
+                    <field name="stateName">nurse-job-4</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="mjht.XD[Gn-8p.o]@,#h">
+            <value name="intent">
+              <block type="intent_dontknow" id="_TS75]q`enY|/g=r[GC{"></block>
+            </value>
+            <statement name="actions">
+              <block type="ask_utterance" id="aBXr%P.]RON)OhFtRq16">
+                <statement name="utterance">
+                  <block type="utt_text" id="U$m-{xddyR|6!?-EGXNw">
+                    <field name="text">Can you give me your best guess?</field>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="M=7KVuK+411EO8%`pXrY">
+                <statement name="actions">
+                  <block type="say_utterance" id="gLw22Jp}2q=yA;!b[Cze">
+                    <statement name="utterance">
+                      <block type="utt_text" id="uo4P:Q6VzY{cPfPN@Puo">
+                        <field name="text">The answer I was looking for was, forceps.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="vrV!LnSo,BY}zZ7G,YFJ">
+                        <statement name="utterance">
+                          <block type="utt_text" id=":R$[D(k%k(_x/eS%r}4c">
+                            <field name="text">Let us continue.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="zV*6,?/e*vlsP-7)A~cQ">
+                            <field name="stateName">nurse-job-4</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="?9N}/R~d^;}:oE9^#_b:" x="1841" y="1478">
+    <field name="stateName">nurse-job-4</field>
+    <statement name="actions">
+      <block type="ask_utterance" id="^Hxtvcl=8ma-[Y.!+6QF">
+        <statement name="utterance">
+          <block type="utt_text" id="BTrBa:~9ZOY/fXMvI4of">
+            <field name="text">How would you handle a difficult patient?</field>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_any" id="aAzC|LrcZkadBsH2Jh1:">
+        <statement name="actions">
+          <block type="say_utterance" id="vQF=kcoBp%mo{]A]ZD42">
+            <statement name="utterance">
+              <block type="utt_text" id=";;m54n_aw3V],L(H)gSt">
+                <field name="text">I see.</field>
+              </block>
+            </statement>
+            <next>
+              <block type="ask_utterance" id="F55ZEoKLzoC4$N}qP{%O">
+                <statement name="utterance">
+                  <block type="utt_text" id="Gud?#nqz:-qGF@H,bU6:">
+                    <field name="text">If the patient's difficulty persists, who would you talk to first? Another nurse or your supervisor?</field>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_example" id="G@;jn#+Rj5_cdb0ohU1h">
+            <field name="responseText">Nurse</field>
+            <statement name="actions">
+              <block type="variable_incr" id="HB^UkvRjdDemi}Kp?N=d">
+                <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                <value name="increment">
+                  <shadow type="text" id="(a4Q`1k!qNM+tdb!0p~@">
+                    <field name="value">1</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id=")JTM1[+ysH+_S%_9)io0">
+                    <statement name="utterance">
+                      <block type="utt_text" id="j=H5uBYv@@4}Y7rvf7=)">
+                        <field name="text">Yes. It is always best to talk to your colleagues for advice before any actions.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="goto" id="dI(m_Ycz*_?[5+uf?72U">
+                        <field name="stateName">nurse-job-5</field>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_example" id=")IH;I-^2`wYpf**,Q9wg">
+                <field name="responseText">Supervisor</field>
+                <statement name="actions">
+                  <block type="say_utterance" id=":}RbE1)pKOo~k6]~k,Ma">
+                    <statement name="utterance">
+                      <block type="utt_text" id="vI6Tf0no@isNVHs.[3J.">
+                        <field name="text">Disciplinary actions are not best in these situations.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="F@P7T`9E/X(v/DcSuMX_">
+                        <statement name="utterance">
+                          <block type="utt_text" id="2]Sg%4%h^4B#U-07r^9R">
+                            <field name="text">It is best to go beyond their attitude to provide them the best care.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id=")%y`iI`Byyz;z)jGPQ3v">
+                            <field name="stateName">nurse-job-5</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="q$I6J9dY-rpzdzX)JOpR" x="2413" y="1458">
+    <field name="stateName">nurse-job-5</field>
+    <statement name="actions">
+      <block type="say_utterance" id="1~hogI{8JGW!nb^.xwFN">
+        <statement name="utterance">
+          <block type="utt_text" id="{@cVUgn=OhY495lI21@M">
+            <field name="text">We sometimes require our nurses to fill other nursing positions when we are understaffed.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="ask_utterance" id="H1k^BP6)?`lR%-4W0SVv">
+            <statement name="utterance">
+              <block type="utt_text" id="Bv8h73H-y#8ggnMm{?vy">
+                <field name="text">Would you describe yourself as a flexible worker?</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <next>
+      <block type="onresponse_intent" id="--Zs5,*RY+-wO`}N0Y0J">
+        <value name="intent">
+          <block type="intent_yes" id="jB7IMhBwsh]Aq!IrHV7M"></block>
+        </value>
+        <statement name="actions">
+          <block type="variable_incr" id="apKqwMsabhQC0n?_CiKl">
+            <field name="variable" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+            <value name="increment">
+              <shadow type="text" id="*IZNrsquaTXi~LaK%D4-">
+                <field name="value">1</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="action_gesture" id="2c#t1++#~1]GWp1iHm:Q">
+                <field name="gesture">Nod</field>
+                <next>
+                  <block type="ask_utterance" id="b4W]p#V4Iu@Ixtbk@]og">
+                    <statement name="utterance">
+                      <block type="utt_text" id="KSUl=^|LYX,KrYiPf.`$">
+                        <field name="text">Great, can you explain further?</field>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="onresponse_intent" id="YKt9(~y`7c_H1k{wzcaz">
+            <value name="intent">
+              <block type="intent_no" id="Q;#e_L~(*yGz3nI3h4_^"></block>
+            </value>
+            <statement name="actions">
+              <block type="action_gesture" id=":L;(|T.a@f1;!Y-cFml|">
+                <field name="gesture">ExpressSad</field>
+                <next>
+                  <block type="say_utterance" id="dy-)Hj2EQB`yLl9EBsHY">
+                    <statement name="utterance">
+                      <block type="utt_text" id="OT]`-f|N$i=(Rv;]L~C.">
+                        <field name="text">I see. Although it does not happen often, we sometimes need our nurses to fill those positions.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="mF]39bI}g{k/fX[B`/GT">
+                        <statement name="utterance">
+                          <block type="utt_text" id="rL-|zQL:2nX6B=ene=0z">
+                            <field name="text">Especially during times of emergency.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="goto" id="OP.4LMO*/M9_=A[.wR|E">
+                            <field name="stateName">nurse-final</field>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <next>
+              <block type="onresponse_any" id="j%p6cPd=UQOox$bkj[(e">
+                <statement name="actions">
+                  <block type="action_gesture" id="jlxj?BP+}mTEz|TYmOre">
+                    <field name="gesture">BigSmile</field>
+                    <next>
+                      <block type="say_utterance" id="_E07v5BR;IKUHev)X]/V">
+                        <statement name="utterance">
+                          <block type="utt_text" id="3?/|hx5x%%yRYziMnHRO">
+                            <field name="text">That is good to hear. It does not happen often. </field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="say_utterance" id=".~T0[Kw9d$l0E]Oa{S~O">
+                            <statement name="utterance">
+                              <block type="utt_text" id="`Ph7Qm]FXWOO0pMt9)5E">
+                                <field name="text">However, we sometimes need those areas to be filled in.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="action_gesture" id="3%slA8+9?Li^renGD2td">
+                                <field name="gesture">Smile</field>
+                                <next>
+                                  <block type="say_utterance" id="we-#PRyvu[tWVvkPY@uK">
+                                    <statement name="utterance">
+                                      <block type="utt_text" id="twUUSqw%x:_BugPE8UnZ">
+                                        <field name="text">We appreciate people like you who are willing to step up for others.</field>
+                                      </block>
+                                    </statement>
+                                    <next>
+                                      <block type="goto" id="K0~^m~E-M+UV9Fxo~x*S">
+                                        <field name="stateName">nurse-final</field>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="state" id="phD9(Hyak*Z1bSn,aMA;" x="3039" y="1439">
+    <field name="stateName">nurse-final</field>
+    <statement name="actions">
+      <block type="say_utterance" id="X[i]25NnOlB{s[z3XpT2">
+        <statement name="utterance">
+          <block type="utt_text" id="62MINrp8Q-xNas)cW(U+">
+            <field name="text">Thank you for your time.</field>
+          </block>
+        </statement>
+        <next>
+          <block type="if_then_else" id="|*:{e`u3`$N!K:,+L/s{">
+            <value name="cond">
+              <block type="cond_compare" id="Yf0Rf1gVSg4ME+/|8^0t">
+                <field name="comparison">&gt;</field>
+                <value name="first">
+                  <block type="variable_get" id="}6e:7vc-s{iIW/-DndMG">
+                    <field name="varname" id="keeckn4czj%5tp33Xv]T" variabletype="GenericValue">qualifications</field>
+                  </block>
+                </value>
+                <value name="second">
+                  <block type="text" id="cI=WPn|h6Ib-}p,hM}Z%">
+                    <field name="value">2</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="actions">
+              <block type="action_gesture_param" id="1mo6E*@-n.6|j1!bZ.b(">
+                <field name="gesture">BigSmile</field>
+                <value name="strength">
+                  <shadow type="text" id="T{K}JwvHqh3%zMZ5U/?c">
+                    <field name="value">3.0</field>
+                  </shadow>
+                </value>
+                <value name="duration">
+                  <shadow type="text" id="8/BB#1i==I|Tsaa;_[=k">
+                    <field name="value">3.0</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="say_utterance" id="U~JS~BY@2hjakKd9z.MH">
+                    <statement name="utterance">
+                      <block type="utt_text" id=",Jq{bdW/FWx:fQ!5KvTc">
+                        <field name="text">Congratulations, we would like to offer you the</field>
+                        <next>
+                          <block type="utt_value" id="Ue0|fT1-}r[^zH{{,=dh">
+                            <value name="value">
+                              <block type="variable_get" id="F.P#2fX,Yfm.~FS(;{c~">
+                                <field name="varname" id="S=f]UPn-mK167Iu8Gbit" variabletype="GenericValue">nursing-position</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="utt_text" id="w;,^4cimmQud,rG$hP7e">
+                                <field name="text">position! We were impressed with your qualifications and would love for you to join us.</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="actions2">
+              <block type="action_gesture" id="Rf)Yc5,no505N1uBH[}q">
+                <field name="gesture">Oh</field>
+                <next>
+                  <block type="say_utterance" id="G._@%8daldwY!(^gJ_,`">
+                    <statement name="utterance">
+                      <block type="utt_text" id="+4#0|jw2)zfXrWCl2WuC">
+                        <field name="text">Unfortunately, we cannot offer you a position at this time.</field>
+                      </block>
+                    </statement>
+                    <next>
+                      <block type="say_utterance" id="45G$#/8reh0H3L.:05eP">
+                        <statement name="utterance">
+                          <block type="utt_text" id="iU+R=K~2_])/,:Ukt~6k">
+                            <field name="text">At Torero Inc, we want to make sure that our employees fit our requirements.</field>
+                          </block>
+                        </statement>
+                        <next>
+                          <block type="say_utterance" id="J37;%#!]t1#91sSu:w?[">
+                            <statement name="utterance">
+                              <block type="utt_text" id="Grol7{15uN(YFDJF*Kx`">
+                                <field name="text">We wish you success in your future endeavors.</field>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="action_gesture" id="e][K=E}D:Vtd1/5MclMS">
+                                <field name="gesture">Nod</field>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="state" id=":eOQ!ly63~bTQKOmFa_+" x="-356" y="2188">
+    <field name="stateName">chem-job</field>
+    <statement name="actions">
+      <block type="say_utterance" id="z^:JXX,swTT(ethgmzNc">
+        <statement name="utterance">
+          <block type="utt_text" id="=s^ukb;L``!aoC3SI4Z2">
+            <field name="text">We are currently looking for an analytic chemist, chemical engineer, and a toxicologist. </field>
+          </block>
+        </statement>
+        <next>
+          <block type="ask_utterance" id=";sgYzD*vcQL|?sZcNA2U">
+            <statement name="utterance">
+              <block type="utt_text" id="JX?X=f_#o`@P$jRC#Ex3">
+                <field name="text">Which position were you interested in?</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
